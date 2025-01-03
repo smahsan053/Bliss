@@ -4,9 +4,7 @@ import { searchProductsByName } from "@/sanity/helpers";
 import React from "react";
 
 interface Props {
-  searchParams: {
-    query: string;
-  };
+  searchParams: Promise<{ query: string }>;
 }
 const SearcPage = async ({ searchParams }: Props) => {
   const { query } = await searchParams;
